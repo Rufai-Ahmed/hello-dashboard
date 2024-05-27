@@ -1,42 +1,15 @@
-import React from "react";
+import { ChartOptions } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
-const randNum = () => Math.floor(Math.random() * 1000);
-
-export const options: {
-  responsive: boolean;
-  plugins: {
-    legend: { position: string };
-    title: { display: boolean; text: string };
-  };
-  scales: { y: { beginAtZero: boolean } };
-} = {
+const options: ChartOptions<"bar"> = {
   responsive: true,
   plugins: {
     legend: {
-      position: "top",
+      position: "top" as const, // Use 'as const' to assert the type
     },
     title: {
       display: true,
-      text: "Cutomer Rate",
+      text: "Chart.js Bar Chart",
     },
   },
   scales: {
@@ -46,28 +19,15 @@ export const options: {
   },
 };
 
-const labels = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-export const data = {
-  labels,
+const data = {
+  labels: ["January", "February", "March", "April", "May", "June", "July"],
   datasets: [
     {
-      label: "Cutomers",
-      data: labels.map(() => randNum()),
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      label: "Dataset 1",
+      data: [65, 59, 80, 81, 56, 55, 40],
+      backgroundColor: "rgba(75,192,192,0.2)",
+      borderColor: "rgba(75,192,192,1)",
+      borderWidth: 1,
     },
   ],
 };
