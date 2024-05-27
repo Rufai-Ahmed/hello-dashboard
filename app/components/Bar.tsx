@@ -21,7 +21,14 @@ ChartJS.register(
 
 const randNum = () => Math.floor(Math.random() * 1000);
 
-export const options = {
+export const options: {
+  responsive: boolean;
+  plugins: {
+    legend: { position: string };
+    title: { display: boolean; text: string };
+  };
+  scales: { y: { beginAtZero: boolean } };
+} = {
   responsive: true,
   plugins: {
     legend: {

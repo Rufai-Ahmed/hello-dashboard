@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, FC } from "react";
-import { tableData } from "../order/page";
 import { iTableRow } from "./TableRow";
+import { tableData } from "../data/data";
 
 interface iOrder {
   i: number;
