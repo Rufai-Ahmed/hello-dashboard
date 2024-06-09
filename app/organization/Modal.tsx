@@ -10,7 +10,7 @@ const Modal = () => {
 
     const data = { name, address, number, id: Date.now() };
 
-    fetch("http://localhost:4001/data", {
+    fetch("http://localhost:4000/data", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -51,10 +51,10 @@ const Modal = () => {
           <form action={handleAction}>
             <div>
               <label className="label-text text-[16px] font-semibold">
-                Name
+                Organization Name
               </label>
               <input
-                placeholder="Name"
+                placeholder="Organization Name"
                 type="text"
                 className="input border input-bordered h-[40px] w-full my-2"
                 name="name"

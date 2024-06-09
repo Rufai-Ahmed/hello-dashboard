@@ -21,7 +21,12 @@ const MemberModal: FC<iOrganization> = ({ id }) => {
               Organization Name: {getData?.name}
             </h1>
 
-            <h1 className="font-bold mb-5 text-[30px] ">Members:</h1>
+            <h1 className="font-bold mb-5 text-[30px] ">
+              Members:{" "}
+              <span className="text-[19px]">
+                {!getData?.members! && "No member added"}{" "}
+              </span>
+            </h1>
 
             {getData?.members?.map((el: iOrganization, i: number) => (
               <p key={i}>
