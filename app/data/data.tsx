@@ -1,4 +1,4 @@
-import { iTableRow } from "../components/TableRow";
+import { iSideData, iTableRow } from "./types";
 
 export const tableData: iTableRow[] = [
   {
@@ -39,5 +39,24 @@ export const tableData: iTableRow[] = [
     userName: "Yancy Tear",
     time: "6:00 PM",
     status: "pending",
+  },
+];
+
+export const sideData: iSideData[] = [
+  {
+    name: "Home",
+    route: "/",
+  },
+  {
+    name: "food",
+  },
+  {
+    name: "notification",
+  },
+  {
+    name: "order",
+  },
+  {
+    name: "organization",
   },
 ];

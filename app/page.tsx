@@ -4,12 +4,11 @@ import React from "react";
 import { BiShoppingBag } from "react-icons/bi";
 import { FaBoxesStacked } from "react-icons/fa6";
 import { GoListOrdered } from "react-icons/go";
-import { GrOrderedList } from "react-icons/gr";
 import { VscListOrdered } from "react-icons/vsc";
 import PieCharts from "./components/Pie";
 import { BarChart } from "./components/Bar";
 import LineChart from "./components/Line";
-import Header from "./components/Header";
+import Header from "./static/Header";
 
 const page = () => {
   const cardData: iCard[] = [

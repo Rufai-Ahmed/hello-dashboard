@@ -1,7 +1,8 @@
 "use client";
-import TableRow, { iTableRow } from "../components/TableRow";
+import TableRow from "../components/TableRow";
 import OrderModal from "../components/OrderModal";
 import { tableData } from "../data/data";
+import { iTableRow } from "../data/types";
 
 const Page = () => {
   return (

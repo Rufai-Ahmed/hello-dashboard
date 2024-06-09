@@ -43,7 +43,7 @@ export const contentCardData: iContent[] = [
 
 export const ContentCard: FC<iContent> = ({ img, price, stars, title }) => {
   return (
-    <div className="w-[300px] bg-white h-[350px] rounded-md flex flex-col items-center">
+    <div className="bg-white h-[350px] rounded-md flex flex-col items-center">
       <div className="h-[60%] w-full relative">
         <Image
           src={img!}

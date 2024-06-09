@@ -1,17 +1,6 @@
 "use client";
 import { FC, HTMLAttributes } from "react";
-
-export interface iTableRow extends HTMLAttributes<HTMLElement> {
-  orderID?: string | number;
-  food?: string;
-  imgSrc?: string;
-  location?: string;
-  userName?: string;
-  i?: number | null;
-  jobTitle?: string;
-  status?: "pending" | "delivered" | "pending";
-  time?: string;
-}
+import { iTableRow } from "../data/types";
 
 const TableRow: FC<iTableRow> = ({
   orderID,

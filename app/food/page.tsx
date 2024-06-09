@@ -78,7 +78,7 @@ const page = () => {
             View all <FaAngleRight />
           </p>
         </div>
-        <div className="flex justify-start gap-5">
+        <div className="flex justify-start gap-5 w-full overflow-x-auto pb-5">
           {categoryData.map((el: iCategoryCard, i: number) => (
             <CategoryCard key={i} text={el.text} icon={el.icon} />
           ))}
@@ -87,7 +87,7 @@ const page = () => {
 
       <div className="w-full mt-10">
         <h2 className="font-bold text-[24px] mb-5">Popular Dishes</h2>
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 justify-start gap-5">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 justify-between gap-3">
           {contentCardData.map((el: iContent, i: number) => (
             <ContentCard
               img={el.img}
